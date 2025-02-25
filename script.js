@@ -160,6 +160,11 @@ function createGrid(gridSize) {
             });
         });
         gridContainer.appendChild(gridItem);
+
+        // For dragging error 
+        document.addEventListener("dragstart", function (event) {
+            event.preventDefault();
+        });
     }
 
     document.addEventListener("mouseup", function () {
